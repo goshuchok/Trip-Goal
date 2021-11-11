@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trip Goal</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"
+    />
+    <link rel="stylesheet" href="slick/slick.css" />
+    <link rel="stylesheet" href="slick/slick-theme.css" />
+  </head>
+  <body>
+    <header id="anchor">
+      <div class="header__container">
+        <div class="logo">
+          <p>Trip<span>Goal</span></p>
+          <div class="circle"></div>
+        </div>
+        <div class="menu__toggle icon">
+          <div class="hamburger"></div>
+        </div>
+        <div class="menu">
+          <ul class="menu__ul">
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#packages">Packages</a></li>
+            <li><a href="#contact_us">Contact Us</a></li>
+            <li>
+              <a href="#faq">FAQ</a>
+            </li>
+          </ul>
+        </div>
+        <button class="btn" data-fancybox="dialog" data-src="#registration">
+          Register
+        </button>
+        <div
+          id="registration"
+          style="display: none; width: 500px; background: #f8f8f8"
+        >
+          <h3 style="color: #002248">Register</h3>
+          <label> Email </label>
+          <input
+            type="text"
+            placeholder="Enter Email"
+            name="email"
+            id="email"
+            required
+            style="
+              border: 2px solid #3685fb;
+              border-radius: 5px;
+              padding: 5px;
+              margin-bottom: 10px;
+              outline: none;
+            "
+          />
+          <label> Password </label>
+          <input
+            type="password"
+            placeholder="Enter Password"
+            name="psw"
+            id="psw"
+            required
+            style="
+              border: 2px solid #3685fb;
+              border-radius: 5px;
+              padding: 5px;
+              margin-bottom: 10px;
+              outline: none;
+            "
+          />
+          <label> Repeat Password </label>
+          <input
+            type="password"
+            placeholder="Repeat Password"
+            name="psw-repeat"
+            id="psw-repeat"
+            required
+            style="
+              border: 2px solid #3685fb;
+              border-radius: 5px;
+              padding: 5px;
+              margin-bottom: 10px;
+              outline: none;
+            "
+          />
+          <button
+            type="submit"
+            style="
+              border-radius: 10px;
+              background-color: #3685fb;
+              color: #ffffff;
+              border: none;
+              width: 120px;
+              height: 50px;
+              cursor: pointer;
+              margin-top: 20px;
+            "
+          >
+            Register
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="home">
+        <div class="home__header">
+          <div class="home__header__image">
+            <img src="/images/road.png" class="road" alt="road" />
+            <img src="/images/pool.png" class="pool" alt="pool" />
+          </div>
+          <div class="home__header__text">
+            <p>Book Now</p>
+            <h1>
+              Let’s Enjoy Your Trip<br />
+              With TripGoal<img src="images/raketa.svg" alt="raketa" />
+            </h1>
+
+            <p class="content">
+              Thinking of taking a break from every day's busy life? Planning to
+              go<br />
+              out of the country with your loved ones to have some fun and
+              quality<br />
+              time in a cost-effective way?
+            </p>
+            <button>Start Now</button>
+          </div>
+        </div>
+        <div class="home__footer">
+          <div class="select__container">
+            <select class="select">
+              <option class="test">Location</option>
+              <option class="test">Location 1</option>
+              <option class="test">Location 2</option>
+            </select>
+            <p class="select__text">Select</p>
+          </div>
+          <div class="select__container">
+            <select class="select">
+              <option>Your Category</option>
+              <option>Your Category 1</option>
+              <option>Your Category 2</option>
+            </select>
+            <p class="select__text">Select</p>
+          </div>
+          <div class="select__container">
+            <select class="select">
+              <option>Total Person</option>
+              <option>Total Person 1</option>
+              <option>Total Person 2</option>
+            </select>
+            <p class="select__text">Select</p>
+          </div>
+          <button type="submit" class="home__book">
+            <i class="fas fa-calendar-alt fa-2x"></i>
+            <span>Book Now</span>
+          </button>
+        </div>
+      </section>
+      <section class="travel">
+        <div class="travel__container">
+          <div class="travel__top">
+            <p class="travel__step">3 steps for the perfect trip</p>
+            <h2>Find Travel Perfection</h2>
+            <p class="travel__text">
+              Naturally head of the class whenit comes to luxury travel
+              planning, because <br />
+              we do more homework than anyone else
+            </p>
+          </div>
+          <div class="travel__choise">
+            <div class="travel__info">
+              <img src="images/Chat.png" alt="chat" />
+              <p class="travel__textbold">Tell us what you want to do</p>
+              <p>
+                Fill out a 2-minute questionnaire<br />
+                about how you like to travel
+              </p>
+            </div>
+            <div class="travel__info">
+              <img src="images/Calendar.png" alt="calendar" />
+              <p class="travel__textbold">Share your travel preference</p>
+              <p>
+                It all happends online,We recommend<br />
+                everything to your vision
+              </p>
+            </div>
+            <div class="travel__info">
+              <img src="images/Star.png" alt="star" />
+              <p class="travel__textbold">We’ll give you recommendations</p>
+              <p>
+                Once you’re happy with your final plan,<br />
+                We handle everything for you
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="location">
+        <div class="location__container">
+          <div class="location__head">
+            <p>Location</p>
+            <h2>Suggested Location</h2>
+            <div class="location__text">
+              <div>
+                <p>
+                  Travel is my life. Since 1999, I’ve been traveling around the
+                  world nonstop.
+                </p>
+                <p>If you also love travel, you’re in the right place!</p>
+              </div>
+              <div class="arrow">
+                <div class="arrow__prev">
+                  <span>
+                    <i class="fas fa-angle-left fa-2x"></i>
+                  </span>
+                </div>
+                <div class="arrow__next">
+                  <span><i class="fas fa-angle-right fa-2x"></i></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="location__slider">
+            <div class="slider__card1">
+              <div class="slider__indonesia">
+                <div class="card__info">
+                  <p class="card__location">Bali Handara Gate</p>
+                  <p>Indonesia</p>
+                </div>
+                <div class="card__star">
+                  <div class="stars">
+                    <img src="images/smallstar.png" alt="star" />
+                    <img src="images/smallstar.png" alt="star" />
+                    <img src="images/smallstar.png" alt="star" />
+                    <img src="images/smallstar.png" alt="star" />
+                    <img src="images/smallstar.png" alt="star" />
+                  </div>
+                  <p>$1200</p>
+                </div>
+              </div>
+            </div>
+            <div class="slider__card2">
+              <div class="slider__japan">
+                <div class="card__info">
+                  <p class="card__location">Buddhist shrine</p>
+                  <p>Tokyo, Japan</p>
+                </div>
+                <div class="card__star">
+                  <div class="stars">
+                    <img src="images/smallstar.png" alt="star" />
+                    <img src="images/smallstar.png" alt="star" />
+                    <img src="images/smallstar.png" alt="star" />
+                    <img src="images/smallstar.png" alt="star" />
+                    <img src="images/smallstar.png" alt="star" />
+                  </div>
+                  <p>$1200</p>
+                </div>
+              </div>
+            </div>
+            <div class="slider__card3">
+              <div class="slider__italy">
+                <div class="card__info">
+                  <p>Rialto Bridge</p>
+                  <p>Italy</p>
+                </div>
+                <div class="card__star">
+                  <div class="stars">
+                    <img src="images/smallstar.png" alt="star" />
+                    <img src="images/smallstar.png" alt="star" />
+                    <img src="images/smallstar.png" alt="star" />
+                    <img src="images/smallstar.png" alt="star" />
+                    <img src="images/smallstar.png" alt="star" />
+                  </div>
+                  <p>$1200</p>
+                </div>
+              </div>
+            </div>
+            <div class="slider__card1">
+              <div class="slider__indonesia">
+                <div class="card__info">
+                  <p class="card__location">Bali Handara Gate</p>
+                  <p>Indonesia</p>
+                </div>
+                <div class="card__star">
+                  <div class="stars">
+                    <img src="images/smallstar.png" alt="star" />
+                    <img src="images/smallstar.png" alt="star" />
+                    <img src="images/smallstar.png" alt="star" />
+                    <img src="images/smallstar.png" alt="star" />
+                    <img src="images/smallstar.png" alt="star" />
+                  </div>
+                  <p>$1200</p>
+                </div>
+              </div>
+            </div>
+            <div class="slider__card2">
+              <div class="slider__japan">
+                <div class="card__info">
+                  <p class="card__location">Buddhist shrine</p>
+                  <p>Tokyo, Japan</p>
+                </div>
+                <div class="card__star">
+                  <div class="stars">
+                    <img src="images/smallstar.png" alt="star" />
+                    <img src="images/smallstar.png" alt="star" />
+                    <img src="images/smallstar.png" alt="star" />
+                    <img src="images/smallstar.png" alt="star" />
+                    <img src="images/smallstar.png" alt="star" />
+                  </div>
+                  <p>$1200</p>
+                </div>
+              </div>
+            </div>
+            <div class="slider__card3">
+              <div class="slider__italy">
+                <div class="card__info">
+                  <p>Rialto Bridge</p>
+                  <p>Italy</p>
+                </div>
+                <div class="card__star">
+                  <div class="stars">
+                    <img src="images/smallstar.png" alt="star" />
+                    <img src="images/smallstar.png" alt="star" />
+                    <img src="images/smallstar.png" alt="star" />
+                    <img src="images/smallstar.png" alt="star" />
+                    <img src="images/smallstar.png" alt="star" />
+                  </div>
+                  <p>$1200</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="discover">
+        <div class="discover__container">
+          <div class="discover__video">
+            <div class="discover__circle">
+              <a
+                href="https://www.youtube.com/watch?v=0Ej7F_qBoCA"
+                data-fancybox
+              >
+                <img src="images/play.png" alt="play" />
+              </a>
+            </div>
+          </div>
+          <div class="discover__about">
+            <p>Take a Tour</p>
+            <h2>
+              Discover Our Travel<br />
+              Guideline
+            </h2>
+            <p class="discover__text">
+              For curious travelers who want to connect locally and go<br />
+              deeper into a place. Our Experiential Travel Guides highlight<br />
+              offbeat and local experiences that help you.
+            </p>
+            <button type="button">Start Now</button>
+            <div class="discover__end">
+              <img src="images/image10.png" alt="image10" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="about">
+        <div class="about__container">
+          <div class="about__info">
+            <div class="about__text">
+              <p>About Us</p>
+              <h2>
+                The Perfect Travel Place For<br />
+                You & Your Family
+              </h2>
+              <p class="text">
+                how travel can be one of the best tools for personal growth. We
+                share<br />
+                some of the life lessons we've learned on the road that has
+                provided<br />
+                us insight into empathy, mindfulness, meditation, comfort
+                zones,<br />
+                two-way storytelling, being present, connection and more.
+              </p>
+            </div>
+            <div class="about__statistic">
+              <div class="statistic__top">
+                <div class="visitor">
+                  <p class="stat">10M+</p>
+                  <p>Visitors</p>
+                </div>
+                <div class="visitor">
+                  <p class="stat">109</p>
+                  <p>Hotels</p>
+                </div>
+              </div>
+              <div class="statistic__top">
+                <div class="visitor">
+                  <p class="stat">29</p>
+                  <p>Food Shop</p>
+                </div>
+                <div class="visitor">
+                  <p class="stat">18</p>
+                  <p>Related Spots</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="about__img">
+            <img src="images/image28.png" alt="image28" class="island" />
+            <img src="images/image9.png" alt="image9" class="window" />
+          </div>
+        </div>
+      </section>
+      <section class="customer">
+        <div class="customer__container">
+          <div class="customer__text">
+            <p class="customer__head">Testimonials</p>
+            <h2>What Our Customer Say About Us</h2>
+            <p class="customer__down">
+              What customers says about our service and guideline. Customers
+              compliment<br />
+              is most important to upgradation of bussiness service
+            </p>
+          </div>
+          <div class="customer__map">
+            <div class="customer__left">
+              <div class="customer__image15">
+                <img src="images/image15.png" alt="image15" />
+              </div>
+              <div class="customer__image14">
+                <img src="images/image14.png" alt="image14" />
+              </div>
+              <div class="customer__image13">
+                <img src="images/image13.png" alt="image13" />
+              </div>
+              <div class="customer__image11">
+                <img src="images/image11.png" alt="image11" />
+              </div>
+            </div>
+            <div class="customer__center">
+              <div class="customer__sliders">
+                <div class="customr__slider">
+                  <img
+                    src="images/image12.png"
+                    alt="image12"
+                    class="customer__main"
+                  />
+
+                  <div class="customer__review">
+                    <div class="customer__coma">
+                      <img
+                        src="images/coma.png"
+                        alt="coma"
+                        class="review__coma"
+                      />
+                      <img
+                        src="images/coma.png"
+                        alt="coma"
+                        class="review__coma"
+                      />
+                    </div>
+
+                    <p class="review__text">
+                      I have traveled and explored several destinations using
+                      this<br />
+                      platform, no doubt it is highly recommended for
+                      traveling<br />
+                      because it is comfortable and the service is great.
+                    </p>
+                    <p class="review__autor">Adam L. Brian</p>
+                    <p class="review__position">Traveller</p>
+                  </div>
+                </div>
+                <div class="customr__slider">
+                  <img
+                    src="images/image12.png"
+                    alt="image12"
+                    class="customer__main"
+                  />
+
+                  <div class="customer__review">
+                    <div class="customer__coma">
+                      <img
+                        src="images/coma.png"
+                        alt="coma"
+                        class="review__coma"
+                      />
+                      <img
+                        src="images/coma.png"
+                        alt="coma"
+                        class="review__coma"
+                      />
+                    </div>
+                    <p class="review__text">
+                      I have traveled and explored several destinations using
+                      this<br />
+                      platform, no doubt it is highly recommended for
+                      traveling<br />
+                      because it is comfortable and the service is great.
+                    </p>
+                    <p class="review__autor">Adam L. Brian</p>
+                    <p class="review__position">Traveller</p>
+                  </div>
+                </div>
+                <div class="customr__slider">
+                  <img
+                    src="images/image12.png"
+                    alt="image12"
+                    class="customer__main"
+                  />
+
+                  <div class="customer__review">
+                    <div class="customer__coma">
+                      <img
+                        src="images/coma.png"
+                        alt="coma"
+                        class="review__coma"
+                      />
+                      <img
+                        src="images/coma.png"
+                        alt="coma"
+                        class="review__coma"
+                      />
+                    </div>
+                    <p class="review__text">
+                      I have traveled and explored several destinations using
+                      this<br />
+                      platform, no doubt it is highly recommended for
+                      traveling<br />
+                      because it is comfortable and the service is great.
+                    </p>
+                    <p class="review__autor">Adam L. Brian</p>
+                    <p class="review__position">Traveller</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="customer__right">
+              <div class="customer__image20">
+                <img src="images/image20.png" alt="image20" />
+              </div>
+              <div class="customer__image16">
+                <img src="images/image16.png" alt="image16" />
+              </div>
+              <div class="customer__image19">
+                <img src="images/image19.png" alt="image19" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="instagram__profile">
+        <div class="instagram__info">
+          <div class="instagram__check">
+            <p>Social Feed</p>
+            <h3>Check Our Instagram <br />Profile</h3>
+          </div>
+          <button>Follow Us</button>
+        </div>
+        <div class="instagram__photo">
+          <img src="images/image26.png" alt="image" class="inst__sea" />
+          <img src="images/image22.png" alt="image" class="inst__church" />
+          <img src="images/image27.png" alt="image" class="inst__bridg" />
+          <img src="images/image23.png" alt="image" class="inst__span" />
+          <img src="images/image21.png" alt="image" class="inst__girl" />
+        </div>
+      </section>
+      <section class="question">
+        <div class="question__container">
+          <div class="question__contact">
+            <p>Contact Us</p>
+            <h4>Do You Have Any Questions?</h4>
+            <button>Contact Us</button>
+          </div>
+          <img src="images/woman.png" alt="woman" />
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer__container">
+        <div class="logo">
+          <p>Trip<span>Goal</span></p>
+          <div class="circle"></div>
+        </div>
+        <div class="menu">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#packages">Packages</a></li>
+            <li><a href="#contact_us">Contact Us</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="social">
+          <a href="#" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-instagram"></a>
+          <a href="#" class="fa fa-pinterest"></a>
+        </div>
+      </div>
+      <hr class="line" />
+      <div class="copyrights">© 2021. All copyrights reserved by RH Agency</div>
+      <div class="to__top">
+        <a href="#anchor" class="topLink">Up</a>
+      </div>
+    </footer>
+
+    <script
+      src="https://kit.fontawesome.com/a62b75a31f.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script src="slick/slick.min.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
