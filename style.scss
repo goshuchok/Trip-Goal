@@ -114,8 +114,69 @@ $color_9: #fcfcfc;
       text-align: end;
     }
   }
+  .star-wrapper {
+    direction: rtl;
+    a {
+      font-size: 1em;
+      color: #fff;
+      text-decoration: none;
+      transition: all 0.5s;
+    }
+    a:hover {
+      color: gold;
+      transform: scale(1.3);
+    }
+    .s1:hover ~ a {
+      color: gold;
+    }
+    .s2:hover ~ a {
+      color: gold;
+    }
+    .s3:hover ~ a {
+      color: gold;
+    }
+    .s4:hover ~ a {
+      color: gold;
+    }
+    .s5:hover ~ a {
+      color: gold;
+    }
+  }
 }
-
+.scroll-up-btn {
+  position: fixed;
+  height: 45px;
+  width: 42px;
+  right: 30px;
+  bottom: 10px;
+  text-align: center;
+  line-height: 45px;
+  color: #fff;
+  z-index: 9999;
+  font-size: 30px;
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  background-image: linear-gradient(
+    to right,
+    #9eefe1 0%,
+    #4830f0 51%,
+    #9eefe1 100%
+  );
+  background-size: 200% auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
+  &:hover {
+    background-position: right center;
+  }
+}
+.scroll-up-btn.show {
+  bottom: 30px;
+  opacity: 1;
+  pointer-events: auto;
+}
 header {
   @extend %pos;
   justify-content: space-around;
@@ -937,49 +998,181 @@ footer {
     font-size: 14px;
     color: $color_5;
   }
-  .to__top {
-    display: flex;
+}
+
+@media (max-width: 993px) {
+  header {
     width: 100%;
-    justify-content: end;
-    .topLink {
-      float: right;
-      border: none;
-      color: white;
-      padding: 20px 30px;
-      margin: 10px 20px;
-      border-radius: 10px;
-      text-transform: uppercase;
-      text-decoration: none;
-      letter-spacing: 2px;
-      background-image: linear-gradient(
-        to right,
-        #9eefe1 0%,
-        #4830f0 51%,
-        #9eefe1 100%
-      );
-      background-size: 200% auto;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-      transition: 0.5s;
-      &:hover {
-        background-position: right center;
+    .header__container {
+      justify-content: space-around;
+    }
+  }
+  main {
+    width: 100%;
+    .home {
+      .home__header {
+        width: 100%;
+        .home__header__text {
+          h1 {
+            font-size: 44px;
+          }
+        }
+      }
+      .home__footer {
+        .select__container {
+          padding: 0;
+        }
+      }
+    }
+
+    .travel {
+      .travel__container {
+        width: 100%;
+        .travel__choise {
+          justify-content: space-around;
+          padding-bottom: 0;
+          .travel__info {
+          }
+        }
+      }
+    }
+    .location {
+      .location__container {
+        width: 100%;
+        .location__slider {
+          .slider__card1 {
+            .slider__indonesia {
+              .card__info {
+                p {
+                  font-size: 16px;
+                }
+              }
+              .card__star {
+                .star-wrapper {
+                  font-size: 13px;
+                }
+                p {
+                  font-size: 16px;
+                }
+              }
+            }
+          }
+          .slider__card2 {
+            .slider__japan {
+              .card__info {
+                p {
+                  font-size: 16px;
+                }
+              }
+              .card__star {
+                .star-wrapper {
+                  font-size: 13px;
+                }
+                p {
+                  font-size: 16px;
+                }
+              }
+            }
+          }
+          .slider__card3 {
+            .slider__italy {
+              .card__info {
+                p {
+                  font-size: 16px;
+                }
+              }
+              .card__star {
+                .star-wrapper {
+                  font-size: 13px;
+                }
+                p {
+                  font-size: 16px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .about .about__container {
+      width: 100%;
+      justify-content: space-around;
+    }
+    .customer {
+      .customer__container {
+        width: 100%;
+        padding: 10px 0;
+        .customer__map {
+          flex-direction: column;
+          .customer__left {
+            .customer__image15 {
+              margin-left: 20%;
+            }
+            .customer__image14 {
+              margin-right: 10%;
+              margin-top: 0;
+            }
+            .customer__image13 {
+              margin: 0;
+            }
+            .customer__image11 {
+              margin-right: 1%;
+              margin-top: 0;
+            }
+          }
+          .customer__center {
+            margin: 0;
+            .customer__sliders {
+              margin: 0 auto;
+            }
+          }
+          .customer__right {
+            .customer__image20 {
+              margin: 2% 10% 0 0;
+            }
+            .customer__image16 {
+              margin: 0 0 0 10%;
+            }
+            .customer__image19 {
+              margin: 0 12% 0 0;
+            }
+          }
+        }
+      }
+    }
+    .instagram__profile .instagram__info {
+      width: 100%;
+    }
+    .instagram__profile .instagram__photo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .question {
+      .question__container {
+        width: 100%;
+        align-items: center;
+        img {
+          max-width: 50%;
+        }
       }
     }
   }
-}
-
-@media (max-width: 1200px) {
-  header {
-    // background-color: red;
+  footer {
+    width: 100%;
+    .footer__container {
+      width: 100%;
+      .line {
+        width: 100%;
+      }
+    }
+  }
+  footer .line {
+    width: 100%;
   }
 }
 
 @media (max-width: 992px) {
-  header {
-    // background-color: green;
-  }
-}
-
-@media (max-width: 767px) and (min-width: 320px) {
   header {
     .header__container {
       flex-direction: column;
@@ -1113,6 +1306,258 @@ footer {
     }
     .to__top {
       width: 80%;
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  main {
+    .home {
+      .home__header {
+        .home__header__image {
+          margin-left: 12%;
+          padding-bottom: 28%;
+          .road {
+            width: 54%;
+            height: auto;
+          }
+          .pool {
+            width: 38%;
+            height: auto;
+            margin-top: 30%;
+            margin-left: -21%;
+          }
+        }
+        .home__header__text {
+          text-align: center;
+          margin: 0;
+          h1 {
+            font-size: 30px;
+          }
+          p {
+            font-size: 13px;
+          }
+          button {
+            margin: 0;
+            width: 114px;
+            height: 34px;
+          }
+        }
+      }
+      .home__footer {
+        flex-direction: column;
+        border-radius: 0;
+        margin-top: 10%;
+        .select {
+          padding: 3px;
+        }
+        .select__text {
+          margin-left: 7px;
+        }
+        .home__book {
+          border-radius: 0;
+        }
+      }
+    }
+    .travel {
+      margin-top: -22%;
+      .travel__container {
+        .travel__top {
+          h2 {
+            font-size: 25px;
+          }
+          p {
+            font-size: 13px;
+          }
+        }
+        .travel__choise {
+          margin: 0;
+        }
+      }
+    }
+    .location {
+      .location__container {
+        padding-bottom: 12%;
+        .location__head {
+          padding-top: 9%;
+          text-align: center;
+          p {
+            font-size: 13px;
+          }
+          h2 {
+            font-size: 25px;
+          }
+        }
+      }
+    }
+    .discover {
+      height: auto;
+      .discover__container {
+        flex-direction: column-reverse;
+        text-align: center;
+        align-items: center;
+        .discover__about {
+          margin-top: 0;
+          padding-top: 10%;
+          p {
+            font-size: 13px;
+          }
+          h2 {
+            font-size: 25px;
+          }
+          .discover__text {
+            padding-left: 5%;
+          }
+          button {
+            width: 114px;
+            height: 45px;
+            margin-top: 0;
+          }
+          .discover__end {
+            img {
+              margin: 0;
+            }
+          }
+        }
+        .discover__video {
+          .discover__circle {
+            margin-top: 0;
+            display: flex;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+    .about {
+      .about__container {
+        .about__info {
+          .about__text {
+            text-align: center;
+            p {
+              font-size: 13px;
+            }
+            h2 {
+              font-size: 25px;
+            }
+          }
+          .about__statistic {
+            .statistic__top {
+              justify-content: center;
+            }
+          }
+        }
+        .about__img {
+          justify-content: center;
+          .island {
+            width: 30%;
+            height: auto;
+            position: inherit;
+            margin-left: 0;
+          }
+          .window {
+            width: 30%;
+            height: auto;
+            position: inherit;
+            margin: 0;
+          }
+        }
+      }
+    }
+    .customer {
+      .customer__container {
+        .customer__text {
+          p {
+            font-size: 13px;
+          }
+          h2 {
+            font-size: 25px;
+          }
+        }
+        .customer__map {
+          .customer__center {
+            .customer__sliders {
+              width: 320px;
+              .customr__slider {
+                .customer__main {
+                  margin: 0 auto;
+                }
+                .customer__review {
+                  width: 320px;
+                  margin: 0 auto;
+                }
+              }
+            }
+            .slick-dots {
+              margin: 0;
+            }
+          }
+          .customer__right {
+            padding-top: 10%;
+          }
+        }
+      }
+    }
+    .instagram__profile {
+      .instagram__info {
+        .instagram__check {
+          text-align: center;
+          p {
+            font-size: 13px;
+          }
+          h3 {
+            font-size: 23px;
+          }
+        }
+        button {
+          width: 114px;
+          height: 50px;
+          margin-top: 5%;
+        }
+      }
+      .instagram__photo {
+        img {
+          max-width: 50%;
+          height: auto;
+        }
+        .inst__sea {
+          display: contents;
+        }
+        .inst__girl {
+          display: contents;
+        }
+      }
+    }
+    .question {
+      .question__container {
+        .question__contact {
+          padding-left: 0;
+          text-align: center;
+          h4 {
+            font-size: 20px;
+          }
+          p {
+            font-size: 13px;
+          }
+          button {
+            width: 114px;
+            height: 50px;
+          }
+        }
+      }
+    }
+  }
+  footer {
+    .footer__container {
+      .menu {
+        ul {
+          display: flex;
+          flex-direction: column;
+          padding: 0;
+          li {
+            padding: 5px 0;
+          }
+        }
+      }
     }
   }
 }

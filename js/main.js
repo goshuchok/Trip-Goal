@@ -7,9 +7,7 @@ $(function () {
       }
     });
   });
-});
 
-$(function () {
   $('.location__slider').slick({
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -19,6 +17,13 @@ $(function () {
     nextArrow: '.arrow__next',
     responsive: [
       {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
@@ -27,28 +32,39 @@ $(function () {
       },
     ],
   });
-});
 
-$(function () {
   $('.customer__sliders').slick({
     dots: true,
     arrows: false,
     autoplay: true,
     autoplaySpeed: 2000,
-  });
-});
-
-$(function () {
-  $('a.topLink').click(function () {
-    $('html, body').animate(
+    responsive: [
       {
-        scrollTop: $($(this).attr('href')).offset().top + 'px',
+        breakpoint: 580,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
       },
-      {
-        duration: 5000,
-        easing: 'swing',
-      }
-    );
-    return false;
+    ],
+  });
+
+  $(window).scroll(function () {
+    if (this.scrollY > 20) {
+      $('.navbar').addClass('sticky');
+    } else {
+      $('.navbar').removeClass('sticky');
+    }
+    if (this.scrollY > 500) {
+      $('.scroll-up-btn').addClass('show');
+    } else {
+      $('.scroll-up-btn').removeClass('show');
+    }
+  });
+  // slide-up script
+  $('.scroll-up-btn').click(function () {
+    $('html').animate({ scrollTop: 0 });
+    // removing smooth scroll on slide-up button click
+    $('html').css('scrollBehavior', 'auto');
   });
 });
